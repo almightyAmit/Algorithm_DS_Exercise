@@ -20,7 +20,7 @@ public class LinkedListTest {
 		System.out.println("done");
 		
 		
-		Node t;
+		/*Node t;
 		t = list.head;
 		while(true){
 			System.out.println(t.data);
@@ -28,7 +28,7 @@ public class LinkedListTest {
 				t = t.next;
 			else
 				break;
-		}
+		}*/
 	}
 	
 	@Test
@@ -42,7 +42,7 @@ public class LinkedListTest {
 		
 		System.out.println("done");
 		
-		Node t;
+		/*Node t;
 		t = list1.head;
 		while(true){
 			System.out.println(t.data);
@@ -50,9 +50,29 @@ public class LinkedListTest {
 				t = t.next;
 			else
 				break;
+		}*/
+	
 	}
 	
- }
-	
+	@Test
+	public void TestInsertAtHead(){
+		AddLinkedList list2 = new AddLinkedList();
+		list2.add(new Node(54));
+		list2.add(new Node(25));
+		list2.add(new Node(100));
+		list2.InsertAtHead(list2.head, 45);
+		list2.InsertAtHead(list2.head, 66);
+		System.out.println("++++++++++++++");
+		System.out.println(list2.head.data);
+		Node t;
+		t = list2.head;
+		while(true){
+			System.out.println(t.data);
+			if(t.next != null)
+				t = t.next;
+			else
+				break;
+		}
+	}
 
 }

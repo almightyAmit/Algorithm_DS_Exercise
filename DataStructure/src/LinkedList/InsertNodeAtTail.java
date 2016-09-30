@@ -1,15 +1,12 @@
-
-
 package LinkedList;
-
 /**
  * Name  	: Amit Saroj
  * Topic 	: LinkedList
  * Subtopic : InsertNodeAtTail.java
  */
 
-public class InsertNodeAtTail {
-	public Node InsertAtTail(Node head, int data)
+public interface InsertNodeAtTail {
+	default public Node InsertAtTail(Node head, int data)
 	{   // t node for traversing to the end of the linkedlist.
 		Node t = new Node();
 		// newNode to add new node to tail of the LinkedList.
