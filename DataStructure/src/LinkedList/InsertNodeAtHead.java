@@ -11,8 +11,9 @@ public interface InsertNodeAtHead {
 		Node newNode = new Node();
 		
 		if(head == null){
+			head = newNode;
 			newNode.data = data;
-			newNode.next = null;
+			head.next = null;
 		}
 		else{
 			newNode.data = data;

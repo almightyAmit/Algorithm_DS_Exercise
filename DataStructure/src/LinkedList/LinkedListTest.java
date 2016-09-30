@@ -62,7 +62,7 @@ public class LinkedListTest {
 		list2.add(new Node(100));
 		list2.InsertAtHead(list2.head, 45);
 		list2.InsertAtHead(list2.head, 66);
-		/*System.out.println("++++++++++++++");
+		System.out.println("++++++++++++++");
 		System.out.println(list2.head.data);
 		Node t;
 		t = list2.head;
@@ -72,7 +72,28 @@ public class LinkedListTest {
 				t = t.next;
 			else
 				break;
-		}*/
+		}
+	}
+	
+	@Test
+	public void TestInsertAtNthNode(){
+		AddLinkedList list2 = new AddLinkedList();
+		list2.add(new Node(104));
+		list2.add(new Node(245));
+		list2.add(new Node(1465));
+		list2.add(new Node(21));
+		list2.InsertNth(list2.head, 45,1);
+		list2.InsertNth(list2.head, 66,3);
+		
+		Node t;
+		t = list2.head;
+		while(true){
+			System.out.println(t.data);
+			if(t.next != null)
+				t = t.next;
+			else
+				break;
+		}
 	}
 
 }

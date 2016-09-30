@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class AddLinkedList implements InsertNodeAtHead, InsertNodeAtTail{
+public class AddLinkedList implements InsertNodeAtHead, InsertNodeAtTail, InsertAtNthNode{
 	
 
 	Node head;
