@@ -1,18 +1,19 @@
 package LinkedList;
 
-public class AddLinkedList implements InsertNodeAtHead, InsertNodeAtTail, InsertAtNthNode{
+public class AddLinkedList implements PrintLinkedList, InsertNodeAtHead, InsertNodeAtTail, InsertAtNthNode, DeleteANodeAtNth, PrintReverseList{
 	
 
 	Node head;
 	Node tail;
+	
 	
 	public void add(Node node)
 	{
 		//Senario 1 if LinkedList is Empty
 		if (head == null)
 		{
-			head = node;
 			tail = node;
+			head = node;
 		}
 		//Senario 2 if LinkedList is NonEmpty
 		else
@@ -21,4 +22,5 @@ public class AddLinkedList implements InsertNodeAtHead, InsertNodeAtTail, Insert
 			tail = node;
 		}
 	}
+	
 }

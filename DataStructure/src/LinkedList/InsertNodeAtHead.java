@@ -8,17 +8,17 @@ public interface InsertNodeAtHead {
 	
 	default public Node InsertAtHead(Node head, int data)
 	{
+		
 		Node newNode = new Node();
+		newNode.data = data;
 		
 		if(head == null){
 			head = newNode;
-			newNode.data = data;
-			head.next = null;
 		}
 		else{
-			newNode.data = data;
 			newNode.next = head;
 			head = newNode;
+			head.data = newNode.data;
 		}
 		return head;
 		

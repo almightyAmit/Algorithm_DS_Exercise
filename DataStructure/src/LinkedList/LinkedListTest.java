@@ -31,7 +31,7 @@ public class LinkedListTest {
 		}*/
 	}
 	
-	@Test
+	/*@Test
 	public void TestInsertAtTail()
 	{
 		AddLinkedList list1 = new AddLinkedList();
@@ -42,7 +42,7 @@ public class LinkedListTest {
 		
 		System.out.println("done");
 		
-		/*Node t;
+		Node t;
 		t = list1.head;
 		while(true){
 			System.out.println(t.data);
@@ -50,9 +50,9 @@ public class LinkedListTest {
 				t = t.next;
 			else
 				break;
-		}*/
+		}
 	
-	}
+	}*/
 	
 	@Test
 	public void TestInsertAtHead(){
@@ -60,33 +60,34 @@ public class LinkedListTest {
 		list2.add(new Node(54));
 		list2.add(new Node(25));
 		list2.add(new Node(100));
-		list2.InsertAtHead(list2.head, 45);
-		list2.InsertAtHead(list2.head, 66);
-		System.out.println("++++++++++++++");
+		list2.InsertAtHead(list2.head, 42);
+		list2.InsertAtHead(list2.head, 12121);
+		
 		System.out.println(list2.head.data);
-		Node t;
+		
+		Node t = new Node();
 		t = list2.head;
 		while(true){
 			System.out.println(t.data);
-			if(t.next != null)
+			if(t.next!=null)
 				t = t.next;
 			else
 				break;
 		}
 	}
 	
-	@Test
+	/*@Test
 	public void TestInsertAtNthNode(){
-		AddLinkedList list2 = new AddLinkedList();
-		list2.add(new Node(104));
-		list2.add(new Node(245));
-		list2.add(new Node(1465));
-		list2.add(new Node(21));
-		list2.InsertNth(list2.head, 45,1);
-		list2.InsertNth(list2.head, 66,3);
+		AddLinkedList list3 = new AddLinkedList();
+		list3.add(new Node(104));
+		list3.add(new Node(245));
+		list3.add(new Node(1465));
+		list3.add(new Node(21));
+		list3.InsertNth(list3.head, 45,1);
+		list3.InsertNth(list3.head, 66,3);
 		
 		Node t;
-		t = list2.head;
+		t = list3.head;
 		while(true){
 			System.out.println(t.data);
 			if(t.next != null)
@@ -94,6 +95,50 @@ public class LinkedListTest {
 			else
 				break;
 		}
+	}*/
+	
+	@Test
+	public void DeleteAnodeAtNth(){
+		AddLinkedList list4 = new AddLinkedList();
+		list4.add(new Node(104));
+		list4.add(new Node(245));
+		list4.add(new Node(1465));
+		list4.add(new Node(21));
+		
+		System.out.println();
+		System.out.println("LinkedList before deleting a Node.");
+		list4.Print(list4.head);
+		System.out.println();
+		
+		System.out.println("Deleting a Node...");
+		list4.DeleteAtNth(list4.head, 1);
+		System.out.println();
+		System.out.println("LinkedList after deleting a Node");
+		list4.Print(list4.head);
 	}
+	
+	@Test
+	public void ReversePrint(){
+		AddLinkedList list5 = new AddLinkedList();
+		list5.add(new Node(1));
+		list5.add(new Node(2));
+		list5.add(new Node(3));
+		list5.add(new Node(4));
+		list5.add(new Node(5));
+		list5.add(new Node(6));
+		list5.add(new Node(7));
+		list5.add(new Node(8));
+		list5.add(new Node(9));
+		list5.add(new Node(10));
+		
+		System.out.println("Before Reversing the list.");
+		list5.Print(list5.head);
+		System.out.println("");
+		
+		System.out.println("After reversing the list");
+		list5.PrintReverse(list5.head);
+		
+	}
+	
 
 }
